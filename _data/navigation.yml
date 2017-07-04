@@ -1,0 +1,21 @@
+languages:
+  - language: "pt"
+    links:
+    - title: "Sobre"
+      url: /sobre/
+    - title: "Contato"
+      url: /contato/
+    - title: "Serviços"
+      url: /servicos
+    - title: "en"
+      url: /en/
+  - language: "en"
+    links:
+    - title: "About"
+      url: /about/
+    - title: "Contact"
+      url: /contact/
+    - title: "Services"
+      url: /services
+    - title: "pt"
+      url: /
