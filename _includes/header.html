@@ -1,4 +1,5 @@
 <!-- Header Start -->
+{% include base.html %}
 <header>
 <div class="container">
   <div class="row">
@@ -14,9 +15,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand">
-                <img src="{{ site.baseurl }}/img/logo.png" alt="Logo" height="80px">
-            </div>            
+            {% if page.language == 'pt' %}
+            <a href="{{ base }}" class="navbar-brand">
+                <img src="{{ site.url }}/img/logo.png" alt="Logo" height="80px">
+            </a>
+            {% endif %}
+            {% if page.language == 'en' %}
+            <a href="{{ site.url }}" class="navbar-brand">
+                <img src="{{ site.url }}/img/logo.png" alt="Logo" height="80px">
+            </a>
+            {% endif %}
           </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
