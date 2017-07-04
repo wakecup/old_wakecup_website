@@ -3,10 +3,14 @@
 #
 
 # Name of your site (displayed in the header)
-name: Wake cup! Digital Marketing
+name: 
+    en: Wake cup! Digital Marketing
+    pt: Wake cup! Digital Marketing
 
 # Short bio or description (displayed in the header)
-description: Consultoria de marketing digital e criação de sites
+description: 
+    en: Digital marketing consulting and website creation
+    pt: Consultoria de marketing digital e criação de sites
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -53,7 +57,7 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
-permalink: /:title/
+permalink: pretty
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
