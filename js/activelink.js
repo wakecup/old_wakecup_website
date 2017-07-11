@@ -1,7 +1,13 @@
-$(document).ready(function(){
-    $(".menu > a").click(function(){
-        $(".menu > a").removeClass("youarehere");
-        $(this).addClass("youarehere");
-    }) 
-}
-)
+$(document).ready(function () {
+    $(function () {
+        var $page = jQuery.url.attr("file");
+        $('.navbar-nav a').each(function () {
+            var $href = $(this).attr('href');
+            if (($href === $page) || ($href === '')) {
+                $(this).addClass('on');
+            } else {
+                $(this).removeClass('on');
+            }
+        });
+    });
+});

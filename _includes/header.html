@@ -35,13 +35,15 @@
                         <a href="{{ p.url | prepend: site.baseurl }}" class="menu">{{ p.title }}</a>
                     {% endif %}
                 {% endfor %}
-                {% if page.name contains "index" %}
-                <a href="{{ site.url }}" class="menu">EN</a>
-                <a href="{{ site.url | append: "/pt" }}" class="menu">PT</a>
-                {% else %}
-                <a href="{{ site.url | append: page.handle }}" class="menu">EN</a>
-                <a href="{{ site.url | append: "/pt" | append: page.handle }}" class="menu">PT</a>
-                {% endif %}            
+                <div class="navbar-lang">
+                    {% if page.name contains "index" %}
+                    <a href="{{ site.url }}" class="lang-switch">EN</a>
+                    <a href="{{ site.url | append: "/pt" }}" class="lang-switch">PT</a>
+                    {% else %}
+                    <a href="{{ site.url | append: page.handle }}" class="lang-switch">EN</a>
+                    <a href="{{ site.url | append: "/pt" | append: page.handle }}" class="lang-switch">PT</a>
+                    {% endif %}
+                </div>
               </nav>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
