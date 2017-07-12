@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome.otf');
+}
 /* var text-decoration */
 /* Common CSS */
 body{
@@ -427,7 +431,7 @@ a {
                     &:before {
                         content: "\f0d7";
                         position: absolute;
-                        font {
+                        font: {
                             family: 'FontAwesome';
                             size: 30px;
                         }
@@ -780,7 +784,7 @@ a {
     p {
         font: {
             size: 18px;
-            weight: 300px;            
+            weight: 300;            
         }
         line-height: 40px;
         color: #292929;
