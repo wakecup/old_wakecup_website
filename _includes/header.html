@@ -32,16 +32,16 @@
                 {% assign pages = site.pages | sort: "nav-order" %}
                 {% for p in pages %}
                     {% if p.language == page.language %}
-                        <a href="{{ p.url | prepend: site.baseurl }}" class="menu">{{ p.title }}</a>
+                        <a href="{{ p.url | prepend: site.baseurl }}" class="menu {% if p.url == page.url %}active{% endif %}">{{ p.title }}</a>
                     {% endif %}
                 {% endfor %}
                 <div class="navbar-lang">
                     {% if page.name contains "index" %}
-                    <a href="{{ site.url }}" class="lang-switch">EN</a>
-                    <a href="{{ site.url | append: "/pt" }}" class="lang-switch">PT</a>
+                    <a href="{{ site.url }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
+                    <a href="{{ site.url | append: "/pt" }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
                     {% else %}
-                    <a href="{{ site.url | append: page.handle }}" class="lang-switch">EN</a>
-                    <a href="{{ site.url | append: "/pt" | append: page.handle }}" class="lang-switch">PT</a>
+                    <a href="{{ site.url | append: page.handle }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
+                    <a href="{{ site.url | append: "/pt" | append: page.handle }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
                     {% endif %}
                 </div>
               </nav>
