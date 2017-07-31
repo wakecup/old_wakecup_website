@@ -1,24 +1,29 @@
 <!-- footer Start -->
+{% include base.html %}
+{% capture language %}{{ page.language }}{% endcapture %}
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="footer-manu">
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="{{ site.baseurl }}/contact">Contact us</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Terms</a></li>
+            {% if language == "pt" %}
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="{{ site.url }}/contact">Contato</a></li>
+              <li><a href="#">Termos</a></li>
+              {% else %}
+              <li><a href="#">About Us</a></li>
+              <li><a href="{{ site.url }}/en/contact">Contact us</a></li>
+              <li><a href="#">Terms</a></li>
+            {% endif %}
           </ul>
         </div>
         <small>
-            {% for language in page.language %}
-             {% if language == "pt" %}
+            {% if language == "pt" %}
              Wake Cup! Digital Marketing 2017 - Criado com Jekyll             
              {% else %}
              2017 Wake Cup! Digital Marketing - Created with Jekyll
-             {% endif %}
-            {% endfor %}
+            {% endif %}
         </small>
       </div>
     </div>

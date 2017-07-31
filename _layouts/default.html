@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ page.language }}">
-  <head>
-    {% include head.html %}
-    {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %}
-  </head>
-  <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <head>
+        {% include head.html %}
+            {% if jekyll.environment == 'production' %}
+            {% include analytics.html %}
+        {% endif %}
+    </head>
+    <body>
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
     </body>
 </html>
 <link rel="stylesheet" href="{{ site.url }}/css/owl.carousel.css">

@@ -16,12 +16,12 @@
             <span class="icon-bar"></span>
             </button>
             {% if page.language == 'pt' %}
-            <a href="{{ base }}" class="navbar-brand">
+            <a href="{{ site.url }}" class="navbar-brand">
                 <img src="{{ site.url }}/img/logo.png" alt="Logo" height="80">
             </a>
             {% endif %}
             {% if page.language == 'en' %}
-            <a href="{{ site.url }}" class="navbar-brand">
+            <a href="{{ site.url }}/en" class="navbar-brand">
                 <img src="{{ site.url }}/img/logo.png" alt="Logo" height="80">
             </a>
             {% endif %}
@@ -37,11 +37,11 @@
                 {% endfor %}
                 <div class="navbar-lang">
                     {% if page.name contains "index" %}
-                    <a href="{{ site.url }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
-                    <a href="{{ site.url | append: "/pt" }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
+                    <a href="{{ site.url | append: "/en" }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
+                    <a href="{{ site.url | append: "/" }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
                     {% else %}
-                    <a href="{{ site.url | append: page.handle }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
-                    <a href="{{ site.url | append: "/pt" | append: page.handle }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
+                    <a href="{{ site.url | append: "/en" | append: page.handle }}" class="lang-switch {% if page.language == 'en' %}active{% else %}inactive{% endif %}">EN</a>
+                    <a href="{{ site.url | append: page.handle }}" class="lang-switch {% if page.language == 'pt' %}active{% else %}inactive{% endif %}">PT</a>
                     {% endif %}
                 </div>
               </nav>

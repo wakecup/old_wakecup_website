@@ -689,31 +689,34 @@ a {
     }
 }
 /* Contact-form Start */
+$contact: #d5d5d5;
 #contact-form {
     padding: {
-        top: 70px;
+        top: 50px;
         bottom: 35px;
     }
     .block {
         form {
             .form-group {
-                padding-bottom: 15px;
+                padding-bottom: 10px;
                 margin: 0px;
                 .form-control {
-                    background: #f6f8fa;
+                    background: $contact;
                     height: 60px;
                     border: 1px solid #eef2f6;
+                    border-radius: 10px;
                     box-shadow: none;
                     width: 100%
                 }
             }
             .form-group-2 {
-                padding-bottom: 15px;
+                padding-bottom: 10px;
                 margin: 0px;
                 textarea {
-                    background: #f6f8fa;
+                    background: $contact;
                     height: 135px;
                     border: 1px solid #eef2f6;
+                    border-radius: 10px;
                     box-shadow: none;
                     width: 100%;
                 }
@@ -724,6 +727,7 @@ a {
             height: 60px;
             background: #47424c;
             border: none;
+            border-radius: 12px;
             color: #fff;
             font: {
                 family: 'Open Sans', sans-serif;
@@ -767,6 +771,7 @@ a {
 .contact-box {
     padding: {
         top: 35px;
+        left: 5px;
         bottom: 58px;
     }
     .block {
